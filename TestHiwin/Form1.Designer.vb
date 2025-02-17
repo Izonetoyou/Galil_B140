@@ -22,14 +22,18 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnConnect = New System.Windows.Forms.Button()
         Me.bt_A_Jog_reverse = New System.Windows.Forms.Button()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.bt_A_Jog_forward = New System.Windows.Forms.Button()
         Me.txt_speed_jogA = New System.Windows.Forms.TextBox()
-        Me.bt_home = New System.Windows.Forms.Button()
+        Me.bt_P1 = New System.Windows.Forms.Button()
         Me.txt_GalilIP = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.bt_Disable_A = New System.Windows.Forms.Button()
+        Me.Bt_enable_A = New System.Windows.Forms.Button()
+        Me.bt_Home_A = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txt_smoothA = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -43,6 +47,9 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_speedA = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.bt_Disable_B = New System.Windows.Forms.Button()
+        Me.Bt_enable_B = New System.Windows.Forms.Button()
+        Me.bt_Home_B = New System.Windows.Forms.Button()
         Me.txt_speed_jogB = New System.Windows.Forms.TextBox()
         Me.bt_B_Jog_forward = New System.Windows.Forms.Button()
         Me.bt_B_Jog_reverse = New System.Windows.Forms.Button()
@@ -59,6 +66,9 @@ Partial Class Form1
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txt_speedB = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.bt_Disable_C = New System.Windows.Forms.Button()
+        Me.Bt_enable_C = New System.Windows.Forms.Button()
+        Me.bt_Home_C = New System.Windows.Forms.Button()
         Me.txt_speed_jogC = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.bt_C_Jog_forward = New System.Windows.Forms.Button()
@@ -76,7 +86,17 @@ Partial Class Form1
         Me.txt_speedC = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel_Galil = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Lb_Status_Galil = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Lb_A_position = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Lb_B_position = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Lb_C_position = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cb_position = New System.Windows.Forms.CheckBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.txt_B_P1 = New System.Windows.Forms.TextBox()
+        Me.txt_C_P1 = New System.Windows.Forms.TextBox()
+        Me.txt_C_P2 = New System.Windows.Forms.TextBox()
+        Me.txt_B_P2 = New System.Windows.Forms.TextBox()
+        Me.bt_P2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -129,14 +149,14 @@ Partial Class Form1
         Me.txt_speed_jogA.TabIndex = 3
         Me.txt_speed_jogA.Text = "10000"
         '
-        'bt_home
+        'bt_P1
         '
-        Me.bt_home.Location = New System.Drawing.Point(715, 67)
-        Me.bt_home.Name = "bt_home"
-        Me.bt_home.Size = New System.Drawing.Size(75, 23)
-        Me.bt_home.TabIndex = 0
-        Me.bt_home.Text = "Home"
-        Me.bt_home.UseVisualStyleBackColor = True
+        Me.bt_P1.Location = New System.Drawing.Point(704, 65)
+        Me.bt_P1.Name = "bt_P1"
+        Me.bt_P1.Size = New System.Drawing.Size(75, 23)
+        Me.bt_P1.TabIndex = 0
+        Me.bt_P1.Text = "P1"
+        Me.bt_P1.UseVisualStyleBackColor = True
         '
         'txt_GalilIP
         '
@@ -148,6 +168,9 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.bt_Disable_A)
+        Me.GroupBox1.Controls.Add(Me.Bt_enable_A)
+        Me.GroupBox1.Controls.Add(Me.bt_Home_A)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.txt_smoothA)
         Me.GroupBox1.Controls.Add(Me.Label8)
@@ -169,6 +192,36 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Servo A"
+        '
+        'bt_Disable_A
+        '
+        Me.bt_Disable_A.Location = New System.Drawing.Point(181, 146)
+        Me.bt_Disable_A.Name = "bt_Disable_A"
+        Me.bt_Disable_A.Size = New System.Drawing.Size(75, 23)
+        Me.bt_Disable_A.TabIndex = 25
+        Me.bt_Disable_A.Tag = "A"
+        Me.bt_Disable_A.Text = "Disable"
+        Me.bt_Disable_A.UseVisualStyleBackColor = True
+        '
+        'Bt_enable_A
+        '
+        Me.Bt_enable_A.Location = New System.Drawing.Point(100, 146)
+        Me.Bt_enable_A.Name = "Bt_enable_A"
+        Me.Bt_enable_A.Size = New System.Drawing.Size(75, 23)
+        Me.Bt_enable_A.TabIndex = 24
+        Me.Bt_enable_A.Tag = "A"
+        Me.Bt_enable_A.Text = "Enable"
+        Me.Bt_enable_A.UseVisualStyleBackColor = True
+        '
+        'bt_Home_A
+        '
+        Me.bt_Home_A.Location = New System.Drawing.Point(19, 146)
+        Me.bt_Home_A.Name = "bt_Home_A"
+        Me.bt_Home_A.Size = New System.Drawing.Size(75, 23)
+        Me.bt_Home_A.TabIndex = 22
+        Me.bt_Home_A.Tag = "A"
+        Me.bt_Home_A.Text = "Home"
+        Me.bt_Home_A.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -276,6 +329,9 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.bt_Disable_B)
+        Me.GroupBox2.Controls.Add(Me.Bt_enable_B)
+        Me.GroupBox2.Controls.Add(Me.bt_Home_B)
         Me.GroupBox2.Controls.Add(Me.txt_speed_jogB)
         Me.GroupBox2.Controls.Add(Me.bt_B_Jog_forward)
         Me.GroupBox2.Controls.Add(Me.bt_B_Jog_reverse)
@@ -297,6 +353,36 @@ Partial Class Form1
         Me.GroupBox2.TabIndex = 6
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Servo B"
+        '
+        'bt_Disable_B
+        '
+        Me.bt_Disable_B.Location = New System.Drawing.Point(184, 146)
+        Me.bt_Disable_B.Name = "bt_Disable_B"
+        Me.bt_Disable_B.Size = New System.Drawing.Size(75, 23)
+        Me.bt_Disable_B.TabIndex = 24
+        Me.bt_Disable_B.Tag = "B"
+        Me.bt_Disable_B.Text = "Disable"
+        Me.bt_Disable_B.UseVisualStyleBackColor = True
+        '
+        'Bt_enable_B
+        '
+        Me.Bt_enable_B.Location = New System.Drawing.Point(103, 146)
+        Me.Bt_enable_B.Name = "Bt_enable_B"
+        Me.Bt_enable_B.Size = New System.Drawing.Size(75, 23)
+        Me.Bt_enable_B.TabIndex = 23
+        Me.Bt_enable_B.Tag = "B"
+        Me.Bt_enable_B.Text = "Enable"
+        Me.Bt_enable_B.UseVisualStyleBackColor = True
+        '
+        'bt_Home_B
+        '
+        Me.bt_Home_B.Location = New System.Drawing.Point(13, 146)
+        Me.bt_Home_B.Name = "bt_Home_B"
+        Me.bt_Home_B.Size = New System.Drawing.Size(75, 23)
+        Me.bt_Home_B.TabIndex = 21
+        Me.bt_Home_B.Tag = "B"
+        Me.bt_Home_B.Text = "Home"
+        Me.bt_Home_B.UseVisualStyleBackColor = True
         '
         'txt_speed_jogB
         '
@@ -432,6 +518,9 @@ Partial Class Form1
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.bt_Disable_C)
+        Me.GroupBox3.Controls.Add(Me.Bt_enable_C)
+        Me.GroupBox3.Controls.Add(Me.bt_Home_C)
         Me.GroupBox3.Controls.Add(Me.txt_speed_jogC)
         Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Controls.Add(Me.bt_C_Jog_forward)
@@ -453,6 +542,36 @@ Partial Class Form1
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Servo C"
+        '
+        'bt_Disable_C
+        '
+        Me.bt_Disable_C.Location = New System.Drawing.Point(181, 146)
+        Me.bt_Disable_C.Name = "bt_Disable_C"
+        Me.bt_Disable_C.Size = New System.Drawing.Size(75, 23)
+        Me.bt_Disable_C.TabIndex = 22
+        Me.bt_Disable_C.Tag = "C"
+        Me.bt_Disable_C.Text = "Disable"
+        Me.bt_Disable_C.UseVisualStyleBackColor = True
+        '
+        'Bt_enable_C
+        '
+        Me.Bt_enable_C.Location = New System.Drawing.Point(99, 146)
+        Me.Bt_enable_C.Name = "Bt_enable_C"
+        Me.Bt_enable_C.Size = New System.Drawing.Size(75, 23)
+        Me.Bt_enable_C.TabIndex = 22
+        Me.Bt_enable_C.Tag = "C"
+        Me.Bt_enable_C.Text = "Enable"
+        Me.Bt_enable_C.UseVisualStyleBackColor = True
+        '
+        'bt_Home_C
+        '
+        Me.bt_Home_C.Location = New System.Drawing.Point(18, 146)
+        Me.bt_Home_C.Name = "bt_Home_C"
+        Me.bt_Home_C.Size = New System.Drawing.Size(75, 23)
+        Me.bt_Home_C.TabIndex = 20
+        Me.bt_Home_C.Tag = "C"
+        Me.bt_Home_C.Text = "Home"
+        Me.bt_Home_C.UseVisualStyleBackColor = True
         '
         'txt_speed_jogC
         '
@@ -597,24 +716,103 @@ Partial Class Form1
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel_Galil})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Lb_Status_Galil, Me.Lb_A_position, Me.Lb_B_position, Me.Lb_C_position})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 509)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(999, 22)
         Me.StatusStrip1.TabIndex = 9
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'ToolStripStatusLabel_Galil
+        'Lb_Status_Galil
         '
-        Me.ToolStripStatusLabel_Galil.Name = "ToolStripStatusLabel_Galil"
-        Me.ToolStripStatusLabel_Galil.Size = New System.Drawing.Size(120, 17)
-        Me.ToolStripStatusLabel_Galil.Text = "ToolStripStatusLabel1"
+        Me.Lb_Status_Galil.Name = "Lb_Status_Galil"
+        Me.Lb_Status_Galil.Size = New System.Drawing.Size(39, 17)
+        Me.Lb_Status_Galil.Text = "Status"
+        '
+        'Lb_A_position
+        '
+        Me.Lb_A_position.Name = "Lb_A_position"
+        Me.Lb_A_position.Size = New System.Drawing.Size(32, 17)
+        Me.Lb_A_position.Text = "A= 0"
+        '
+        'Lb_B_position
+        '
+        Me.Lb_B_position.Name = "Lb_B_position"
+        Me.Lb_B_position.Size = New System.Drawing.Size(31, 17)
+        Me.Lb_B_position.Text = "B= 0"
+        '
+        'Lb_C_position
+        '
+        Me.Lb_C_position.Name = "Lb_C_position"
+        Me.Lb_C_position.Size = New System.Drawing.Size(35, 17)
+        Me.Lb_C_position.Text = "C = 0"
+        '
+        'cb_position
+        '
+        Me.cb_position.AutoSize = True
+        Me.cb_position.Location = New System.Drawing.Point(870, 23)
+        Me.cb_position.Name = "cb_position"
+        Me.cb_position.Size = New System.Drawing.Size(63, 17)
+        Me.cb_position.TabIndex = 10
+        Me.cb_position.Text = "Position"
+        Me.cb_position.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 500
+        '
+        'txt_B_P1
+        '
+        Me.txt_B_P1.Location = New System.Drawing.Point(465, 68)
+        Me.txt_B_P1.Name = "txt_B_P1"
+        Me.txt_B_P1.Size = New System.Drawing.Size(100, 20)
+        Me.txt_B_P1.TabIndex = 11
+        Me.txt_B_P1.Text = "-1000"
+        '
+        'txt_C_P1
+        '
+        Me.txt_C_P1.Location = New System.Drawing.Point(589, 68)
+        Me.txt_C_P1.Name = "txt_C_P1"
+        Me.txt_C_P1.Size = New System.Drawing.Size(100, 20)
+        Me.txt_C_P1.TabIndex = 12
+        Me.txt_C_P1.Text = "1000"
+        '
+        'txt_C_P2
+        '
+        Me.txt_C_P2.Location = New System.Drawing.Point(590, 97)
+        Me.txt_C_P2.Name = "txt_C_P2"
+        Me.txt_C_P2.Size = New System.Drawing.Size(100, 20)
+        Me.txt_C_P2.TabIndex = 15
+        Me.txt_C_P2.Text = "2500"
+        '
+        'txt_B_P2
+        '
+        Me.txt_B_P2.Location = New System.Drawing.Point(466, 97)
+        Me.txt_B_P2.Name = "txt_B_P2"
+        Me.txt_B_P2.Size = New System.Drawing.Size(100, 20)
+        Me.txt_B_P2.TabIndex = 14
+        Me.txt_B_P2.Text = "-2500"
+        '
+        'bt_P2
+        '
+        Me.bt_P2.Location = New System.Drawing.Point(705, 94)
+        Me.bt_P2.Name = "bt_P2"
+        Me.bt_P2.Size = New System.Drawing.Size(75, 23)
+        Me.bt_P2.TabIndex = 13
+        Me.bt_P2.Text = "P2"
+        Me.bt_P2.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(999, 531)
+        Me.Controls.Add(Me.txt_C_P2)
+        Me.Controls.Add(Me.txt_B_P2)
+        Me.Controls.Add(Me.bt_P2)
+        Me.Controls.Add(Me.txt_C_P1)
+        Me.Controls.Add(Me.txt_B_P1)
+        Me.Controls.Add(Me.cb_position)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Label25)
         Me.Controls.Add(Me.GroupBox3)
@@ -622,7 +820,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txt_GalilIP)
         Me.Controls.Add(Me.lblStatus)
-        Me.Controls.Add(Me.bt_home)
+        Me.Controls.Add(Me.bt_P1)
         Me.Controls.Add(Me.btnConnect)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -644,7 +842,7 @@ Partial Class Form1
     Friend WithEvents lblStatus As Label
     Friend WithEvents bt_A_Jog_forward As Button
     Friend WithEvents txt_speed_jogA As TextBox
-    Friend WithEvents bt_home As Button
+    Friend WithEvents bt_P1 As Button
     Friend WithEvents txt_GalilIP As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txt_speedA As TextBox
@@ -687,11 +885,30 @@ Partial Class Form1
     Friend WithEvents txt_speedC As TextBox
     Friend WithEvents Label25 As Label
     Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStripStatusLabel_Galil As ToolStripStatusLabel
+    Friend WithEvents Lb_Status_Galil As ToolStripStatusLabel
     Friend WithEvents txt_speed_jogB As TextBox
     Friend WithEvents bt_B_Jog_forward As Button
     Friend WithEvents bt_B_Jog_reverse As Button
     Friend WithEvents txt_speed_jogC As TextBox
     Friend WithEvents bt_C_Jog_forward As Button
     Friend WithEvents bt_C_Jog_reverse As Button
+    Friend WithEvents bt_Home_C As Button
+    Friend WithEvents bt_Home_B As Button
+    Friend WithEvents bt_Home_A As Button
+    Friend WithEvents Lb_A_position As ToolStripStatusLabel
+    Friend WithEvents Lb_B_position As ToolStripStatusLabel
+    Friend WithEvents Lb_C_position As ToolStripStatusLabel
+    Friend WithEvents cb_position As CheckBox
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents bt_Disable_C As Button
+    Friend WithEvents Bt_enable_C As Button
+    Friend WithEvents Bt_enable_A As Button
+    Friend WithEvents Bt_enable_B As Button
+    Friend WithEvents bt_Disable_A As Button
+    Friend WithEvents bt_Disable_B As Button
+    Friend WithEvents txt_B_P1 As TextBox
+    Friend WithEvents txt_C_P1 As TextBox
+    Friend WithEvents txt_C_P2 As TextBox
+    Friend WithEvents txt_B_P2 As TextBox
+    Friend WithEvents bt_P2 As Button
 End Class
