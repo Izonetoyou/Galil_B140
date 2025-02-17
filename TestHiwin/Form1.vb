@@ -45,6 +45,7 @@ Public Class Form1
         Dim axis As String = CType(sender, Button).Tag.ToString()
         GalilController.Home(axis)
 
+
     End Sub
 
     Private Sub cb_position_CheckedChanged(sender As Object, e As EventArgs) Handles cb_position.CheckedChanged
