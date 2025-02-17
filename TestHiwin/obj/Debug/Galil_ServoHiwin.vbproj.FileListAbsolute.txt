@@ -1,0 +1,14 @@
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\bin\Debug\TestHiwin.exe.config
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\bin\Debug\TestHiwin.exe
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\bin\Debug\TestHiwin.pdb
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\bin\Debug\TestHiwin.xml
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\Galil_ServoHiwin.vbproj.AssemblyReference.cache
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\Interop.Galil.dll
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\Galil_ServoHiwin.vbproj.ResolveComReference.cache
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\TestHiwin.Form1.resources
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\TestHiwin.Resources.resources
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\Galil_ServoHiwin.vbproj.GenerateResource.cache
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\Galil_ServoHiwin.vbproj.CoreCompileInputs.cache
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\TestHiwin.exe
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\TestHiwin.xml
+D:\NitikornT\Galil B140\Galil_B140\TestHiwin\obj\Debug\TestHiwin.pdb
