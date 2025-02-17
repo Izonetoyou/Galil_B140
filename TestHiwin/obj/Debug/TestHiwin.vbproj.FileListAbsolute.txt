@@ -1,0 +1,14 @@
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\bin\Debug\TestHiwin.exe.config
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\bin\Debug\TestHiwin.exe
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\bin\Debug\TestHiwin.pdb
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\bin\Debug\TestHiwin.xml
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.vbproj.AssemblyReference.cache
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.Form1.resources
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.Resources.resources
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.vbproj.GenerateResource.cache
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.vbproj.CoreCompileInputs.cache
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.exe
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.xml
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.pdb
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\Interop.Galil.dll
+D:\NitikornT\TestHiwin\TestHiwin\TestHiwin\obj\Debug\TestHiwin.vbproj.ResolveComReference.cache
