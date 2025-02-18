@@ -18,16 +18,10 @@
 
 🛠 Usage
 🔗 1. Connect to Controller
-vb
-คัดลอก
-แก้ไข
 Lb_Status_Galil.Text = GalilController.Connect(txt_GalilIP.Text)
 ✅ Establish a connection with the Galil Motion Controller
 
 ⚙️ 2. Set Default Motion Parameters
-vb
-คัดลอก
-แก้ไข
 GalilController.Setdefault(txt_speedA.Text, txt_AccA.Text, txt_DecA.Text, txt_smoothA.Text,
                            txt_speedB.Text, txt_AccB.Text, txt_DecB.Text, txt_smoothB.Text,
                            txt_speedC.Text, txt_AccC.Text, txt_DecC.Text, txt_smoothC.Text)
@@ -35,55 +29,30 @@ GalilController.Setdefault(txt_speedA.Text, txt_AccA.Text, txt_DecA.Text, txt_sm
 
 🎮 3. Jogging (Manual Movement)
 🔼 Move Forward
-
-vb
-คัดลอก
-แก้ไข
 GalilController.Jog_forward("A", txt_speed_jogA.Text)
 🔽 Move Reverse
 
-vb
-คัดลอก
-แก้ไข
 GalilController.Jog_reverse("A", txt_speed_jogA.Text)
 🛑 Stop Jogging
 
-vb
-คัดลอก
-แก้ไข
 GalilController.StopJog()
 🏠 4. Homing
-vb
-คัดลอก
-แก้ไข
 GalilController.Home("A")
 ✅ Automatically moves the axis to the home position
 
 ⚡ 5. Enable/Disable Servo
 🔹 Enable Servo
 
-vb
-คัดลอก
-แก้ไข
 GalilController.Enable("A")
 🔸 Disable Servo
 
-vb
-คัดลอก
-แก้ไข
 GalilController.Disable("A")
 📍 6. Move to Specific Position
-vb
-คัดลอก
-แก้ไข
 GalilController.GoToPosition("B", txt_B_P1.Text)
 GalilController.GoToPosition("C", txt_C_P1.Text)
 ✅ Commands axes B & C to move to predefined positions
 
 📊 7. Read Current Position
-vb
-คัดลอก
-แก้ไข
 Lb_A_position.Text = "A=" & GalilController.GetPositions("A")
 Lb_B_position.Text = "B=" & GalilController.GetPositions("B")
 Lb_C_position.Text = "C=" & GalilController.GetPositions("C")
@@ -94,9 +63,6 @@ Lb_C_position.Text = "C=" & GalilController.GetPositions("C")
 ❌ Jog not working? → Make sure the Servo is enabled
 ❌ Need to Clear Errors? → Use the command
 
-vb
-คัดลอก
-แก้ไข
 dmc.command("CN") ' Clears errors
 📜 License
 🔓 Open-source – feel free to modify and customize as needed
