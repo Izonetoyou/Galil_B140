@@ -30,6 +30,8 @@ Public Class Form1
 
     ' เมื่อปล่อยปุ่ม Mouse (หยุด Jog)
     Private Sub bt_Jog_forward_MouseUp(sender As Object, e As MouseEventArgs) Handles bt_A_Jog_forward.MouseUp, bt_B_Jog_forward.MouseUp, bt_C_Jog_forward.MouseUp, bt_A_Jog_reverse.MouseUp, bt_B_Jog_reverse.MouseUp, bt_C_Jog_reverse.MouseUp
+
+
         GalilController.StopJog()
     End Sub
     Private Sub bt_Jog_reverse_MouseDown(sender As Object, e As MouseEventArgs) Handles bt_A_Jog_reverse.MouseDown, bt_B_Jog_reverse.MouseDown, bt_C_Jog_reverse.MouseDown

@@ -25,7 +25,6 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.btnConnect = New System.Windows.Forms.Button()
         Me.bt_A_Jog_reverse = New System.Windows.Forms.Button()
-        Me.lblStatus = New System.Windows.Forms.Label()
         Me.bt_A_Jog_forward = New System.Windows.Forms.Button()
         Me.txt_speed_jogA = New System.Windows.Forms.TextBox()
         Me.bt_P1 = New System.Windows.Forms.Button()
@@ -121,15 +120,6 @@ Partial Class Form1
         Me.bt_A_Jog_reverse.Tag = "A"
         Me.bt_A_Jog_reverse.Text = "Jog -"
         Me.bt_A_Jog_reverse.UseVisualStyleBackColor = True
-        '
-        'lblStatus
-        '
-        Me.lblStatus.AutoSize = True
-        Me.lblStatus.Location = New System.Drawing.Point(715, 18)
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(39, 13)
-        Me.lblStatus.TabIndex = 1
-        Me.lblStatus.Text = "Label1"
         '
         'bt_A_Jog_forward
         '
@@ -750,11 +740,11 @@ Partial Class Form1
         'cb_position
         '
         Me.cb_position.AutoSize = True
-        Me.cb_position.Location = New System.Drawing.Point(870, 23)
+        Me.cb_position.Location = New System.Drawing.Point(465, 27)
         Me.cb_position.Name = "cb_position"
-        Me.cb_position.Size = New System.Drawing.Size(63, 17)
+        Me.cb_position.Size = New System.Drawing.Size(93, 17)
         Me.cb_position.TabIndex = 10
-        Me.cb_position.Text = "Position"
+        Me.cb_position.Text = "Show Position"
         Me.cb_position.UseVisualStyleBackColor = True
         '
         'Timer1
@@ -819,7 +809,6 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txt_GalilIP)
-        Me.Controls.Add(Me.lblStatus)
         Me.Controls.Add(Me.bt_P1)
         Me.Controls.Add(Me.btnConnect)
         Me.Name = "Form1"
@@ -839,7 +828,6 @@ Partial Class Form1
 
     Friend WithEvents btnConnect As Button
     Friend WithEvents bt_A_Jog_reverse As Button
-    Friend WithEvents lblStatus As Label
     Friend WithEvents bt_A_Jog_forward As Button
     Friend WithEvents txt_speed_jogA As TextBox
     Friend WithEvents bt_P1 As Button

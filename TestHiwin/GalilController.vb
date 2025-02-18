@@ -74,6 +74,7 @@ Public Class Class_GalilController
             dmc.command("SP" & Servo & "= 1000") 'Set speed Home only
             dmc.command("HM" & Servo) 'Home
             dmc.command("BG" & Servo) ' เริ่มการเคลื่อนที่
+            dmc.command("AM" & Servo)
         Catch ex As Exception
             Debug.Print("Home Servo Error: " & ex.Message)
         End Try
