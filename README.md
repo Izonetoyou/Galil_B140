@@ -111,8 +111,8 @@ dmc.command("CN") ' Clears errors
 
 ---
 
-💻 **Developed by:** [Your Name] ⚒️  
-📡 **GitHub Repository:** [Your Repository Link]  
+💻 **Developed by:** [Nitikorn Todting] ⚒️  
+📡 **GitHub Repository:** [(https://github.com/Izonetoyou/Galil_B140.git)]  
 
 🚀 **Now ready to use! Try it out!** 🎯  
 
